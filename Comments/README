@@ -1,0 +1,55 @@
+blurt 1.0 Comments.pm
+=====================
+
+A plugin for blurt 1.0 that enables vistors to leave comments. 
+
+By Matthijs de Jonge (rhmtts@gmail.com).
+
+This software is public domain software: do with it whatever you want.
+
+
+INSTALL:
+========
+
+- Create a new directory comments in de directory where you keep your
+  blurt installation on your web server. Make sure it's world writable
+  (chmod 777)
+
+- Edit head.comments, foot.comments and story.comments and upload them
+  to the template directory on your server
+
+- Edit some variables in Comments.pm : tell it the path to your
+  comments directory and the number of days you want to allow people
+  to attach comments to a post after it's been written
+
+- Upload Comments.pm to the plugins directory of your blurt
+  installation on the server
+
+VARIABLES:
+==========
+
+The comments plugin supplies the following variables for use in all
+story templates:
+
+$Comments::count   : the number of comments attached to a given post
+
+
+The comments plugin also supplies the following variables for use in
+the story.comment template:
+
+$Comments::display   : display all comments
+$Comments::form      : display a form with which users can upload
+their comment. This variable is only filled if the current post is
+less than a given number of days old.
+
+
+USE:
+====
+
+One of my pet peeves with other blog software is that it allows users
+to comment on posts that are so old you've pretty much forgotten about
+them. Especially since it's usually spammers that do this. The
+comments plugin only allows comments to posts that are less than a
+given number of days old (modify Comments.pm to set this number - by
+default it's thirty). Of course if you want to, you can allow comments
+to all posts: simply set this number really high.

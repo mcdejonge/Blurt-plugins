@@ -1,0 +1,30 @@
+blurt 1.0 ShowLastPosts.pm
+===========================
+
+A plugin for blurt 1.0 that displays a list of the last posts (in the
+current category if the current URL limits display to a specific
+category).
+
+By Matthijs de Jonge (rhmtts@gmail.com).
+
+This software is public domain software: do with it whatever you want.
+
+
+INSTALL:
+========
+
+- Edit ShowLastPosts.pm: set the value of $NumPosts to the number of
+  posts you want to show (default is 5).
+
+- Upload ShowLastPosts.pm to the plugins directory of your blurt
+  installation on the server
+
+VARIABLES:
+==========
+
+The ShowLastPosts plugin supplies the following variables for use in all
+templates:
+
+$ShowLastPosts::display   : a list (<ul>) of the last posts in your
+site (or in the current category if you're currently viewing a
+category)

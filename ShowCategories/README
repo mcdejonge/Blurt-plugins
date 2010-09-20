@@ -1,0 +1,24 @@
+blurt 1.0 ShowCategories.pm
+===========================
+
+A plugin for blurt 1.0 that displays a list of all categories
+in your blog
+
+By Matthijs de Jonge (rhmtts@gmail.com).
+
+This software is public domain software: do with it whatever you want.
+
+
+INSTALL:
+========
+
+- Upload ShowCategories.pm to the plugins directory of your blurt
+  installation on the server
+
+VARIABLES:
+==========
+
+The ShowCategories  plugin supplies the following variables for use in all
+templates:
+
+$ShowCategories::display   : a list (<ul>) of all categories in your site

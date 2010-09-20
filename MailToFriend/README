@@ -1,0 +1,61 @@
+blurt 1.0 MailToFriend.pm
+===========================
+
+A plugin for blurt 1.0 that allows visitors to your site to send
+the contents of your posts to their friends via email.
+
+By Matthijs de Jonge (rhmtts@gmail.com).
+
+This software is public domain software: do with it whatever you want.
+
+
+INSTALL:
+========
+
+- Take a look at MailToFriend.pm in the plugins subdirectory of this package
+  Fill in the host name of your mail server, the email address of the web
+  master, the host name of the web server and change the footer text and the
+  status message to something nice 
+
+- Change the templates in the templates subdirectory of this package to suit your needs.
+  You'll probably want to keep the JavaScript - it makes sure people don't go
+  around sending empty forms.
+
+- Upload MailToFriend.pm to the plugins directory on your web server and 
+  upload the .mailtofriend templates to the templates directory on your web server.
+
+NOTES:
+======
+
+- You'll need access to a mail server for MailToFriend to work. If you don't know 
+  if you have such a thing or if you don't know the host name of the mail server you
+  can use, contact your web host. If the mail server isn't located on the same machine
+  as your web server, you'll need to make sure that the mail server is willing to "relay"
+  mail for your web server (again, if you're not sure about this, contact your web host).
+
+- It's imperative that you enter a *valid* email address for the web master (the OurEmail 
+  field in MailToFriend.pm). If you don't, your mail server will refuse to send out email
+  messages for you.
+
+- The plugin will not let you know if the mail server refused to send the message for some
+  reason. Test it by sending yourself a few messages.
+
+- The plugin does very little to prevent spammers from using your site to send out their 
+  unsollicited garbage. What it does do is check if it's called from somewhere within
+  your site (HTTP_REFERER must match $BlogPath). It also makes sure to only send out email when there
+  is in fact a title and a post to send. What this means is that a spammer must at least invest 
+  a little effort before he can send out spam messages using your MailToFriend plugin. As long
+  as very few people actually use blurt, that is probably a waste of time to him. However, if you find 
+  your site does get targeted by spammers, send me an email (rhmtts@gmail.com) and I'll look
+  into the matter as soon as possible.
+
+
+VARIABLES:
+==========
+
+The MailToFriend plugin supplies the following variables for use in all
+templates:
+
+$MailToFriend::StatusMessage : a message that gets shown if email has been sent
+
+It's empty if not applicable.

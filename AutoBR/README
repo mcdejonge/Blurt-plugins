@@ -1,0 +1,21 @@
+blurt 1.0 AutoBR.pm
+===========================
+
+A plugin for blurt 1.0 that converts double new lines in post content
+to <br /><br />, if the post doesn't contain any <br> tags.
+
+By Matthijs de Jonge (rhmtts@gmail.com).
+
+This software is public domain software: do with it whatever you want.
+
+
+INSTALL:
+========
+
+- Upload AutoBR.pm to the plugins directory of your blurt
+  installation on the server
+
+VARIABLES:
+==========
+
+None.

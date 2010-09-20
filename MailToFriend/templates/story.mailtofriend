@@ -1,0 +1,68 @@
+  <h1>
+      Mail "$Title" to a friend
+  </h1>
+
+  <p>$MailToFriend::StatusMessage</p>  
+  <p>Send the text of  "$Title" to a friend via email.</p>
+
+ <p>Below enter your own email address, the email address of the recipient and any comments
+    you want to attach to your message</p>
+
+    <script language="JavaScript">
+      <!--
+      function validateFormRegExp(formObj) {
+        var everythingok = 1;
+        for(i = 0; i < formObj.elements.length ; i++) {
+          var elementObj = formObj.elements[i];
+          var mustMatch = elementObj.getAttribute('mustmatch');
+          if(mustMatch) {
+            mustMatchRE = new RegExp(mustMatch);
+            if(! elementObj.value.match(mustMatchRE)) {
+              var errorMessage = elementObj.getAttribute('errormessage');
+              /*
+              only alert and focus the first time
+              */
+              if(everythingok) {
+                elementObj.focus();
+                if(errorMessage) {
+                  alert(errorMessage);
+                };
+              };
+              everythingok = 0;
+            };
+          };
+        };
+        if(everythingok) {
+          return true;
+          } else {
+          return false;
+        };
+      };
+
+      function validateForm(formObj) {
+        return validateFormRegExp(formObj);
+      };
+
+
+-->
+</script>
+<form name="mailtofriendform" action="$BlogPath/$PostPath/$PostID.mailtofriend" method="post" onsubmit="return validateForm(this);">
+<table>
+<tr>
+<td><strong>Your email:</strong></td>
+<td><input type="text" name="mailtofriendfrom" mustmatch="^.+\@(\[?)[a-zA-Z0-9\-\.]+\.([a-zA-Z]{2,3}|[0-9]{1,3})(\]?)$" errormessage="Enter your own email address!" /></td>
+</tr><tr>
+<td><strong>Recipient email:</strong></td>
+<td><input type="text" name="mailtofriendto" mustmatch="^.+\@(\[?)[a-zA-Z0-9\-\.]+\.([a-zA-Z]{2,3}|[0-9]{1,3})(\]?)$" errormessage="Enter the recipient's email!" /></td>
+</tr><tr>
+<td colspan="2">
+<strong>Comments:</strong><br />
+<textarea name="mailtofriendcomment" rows="5" cols="90"></textarea>
+<br />
+<br />
+<input type="submit" value="Submit" />
+</td></tr></table>
+</form>
+
+
+

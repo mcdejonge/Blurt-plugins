@@ -1,0 +1,30 @@
+blurt 1.0 ShowPath.pm
+===========================
+
+A plugin for blurt 1.0 that displays the current category and the
+current post title (if applicable) in head and foot templates.
+
+By Matthijs de Jonge (rhmtts@gmail.com).
+
+This software is public domain software: do with it whatever you want.
+
+
+INSTALL:
+========
+
+- If you want, you can edit ShowPath.pm to change the separator placed
+  before the category name and post title
+
+- Upload ShowPath.pm to the plugins directory of your blurt
+  installation on the server
+
+VARIABLES:
+==========
+
+The ShowPath plugin supplies the following variables for use in all
+templates:
+
+$ShowPath::Category : the name of the current category
+$ShowPath::PostName : the title of the current post
+
+both are empty if not applicable.

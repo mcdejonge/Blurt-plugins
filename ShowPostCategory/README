@@ -1,0 +1,29 @@
+blurt 1.0 ShowPostCategory.pm
+===========================
+
+A plugin for blurt 1.0 that displays the category of the current post and the url
+of this category in story templates.
+
+By Matthijs de Jonge (rhmtts@gmail.com).
+
+This software is public domain software: do with it whatever you want.
+
+
+INSTALL:
+========
+
+- Upload ShowPostCategory.pm to the plugins directory of your blurt
+  installation on the server
+
+- Nothing else :-)
+
+VARIABLES:
+==========
+
+The ShowPostCategory plugin supplies the following variables for use in all
+templates:
+
+$ShowPostCategory::Category : the name of the post category
+$ShowPostCategory::Category : the url to the post category
+
+both are empty if not applicable.

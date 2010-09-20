@@ -1,0 +1,20 @@
+<div class="post" >
+  <h1>
+    <a name="$PostID" href="$BlogPath/$PostPath/$PostID.$Flavor" title="Permanent link to $Title" >
+      $Title
+    </a>
+  </h1>
+
+  $PostContent
+
+    $Comments::display
+    $Comments::form
+  <div class="postfooter">
+    $PostYear / $PostMonth / $PostDay
+    <br /><br />
+  </div>
+
+
+  <br /><br />
+</div>
+

@@ -1,0 +1,42 @@
+blurt 1.0 LinkList.pm
+===========================
+
+A plugin for blurt 1.0 that displays a list of links in head and foot
+templates.
+
+By Matthijs de Jonge (rhmtts@gmail.com).
+
+This software is public domain software: do with it whatever you want.
+
+
+INSTALL:
+========
+
+- Modify LinkList.txt to contain the links you want to show. Empty
+  lines in LinkList.txt are ignored, as are lines beginning with #
+  (meaning you can have comments in your LinkList.txt)
+
+  Link entries in LinkList.txt consist of the title, a semicolon
+  and the URL, eg:
+
+  blurt;http://blurt.rommelhok.com
+
+- Modify LinkList.pm to let it know where it can find your LinkList.txt
+
+- If you want, you can change what LinkList.pm shows before and after
+  the link list, before and after each link and before and after each
+  link title
+
+- By default LinkList.pm shuffles your list of links. If you don't
+  want it to do that, set the value of $ShuffleList in the LinkList.pm
+  configuration section to 0
+
+- Upload LinkList.pm to the plugins directory of your blurt
+  installation on the server and LinkList.txt to whereever you want
+  to store it.
+
+VARIABLES:
+==========
+
+$LinkList::LinkList : the html code for your link list
+

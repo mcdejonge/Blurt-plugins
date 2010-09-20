@@ -1,0 +1,4 @@
+# empty lines and lines starting with # are ignored.
+# all other lines should have the name of the site to
+# you want to link to and the URL, separated by a semicolon
+blurt;http://blurt.rommelhok.com
